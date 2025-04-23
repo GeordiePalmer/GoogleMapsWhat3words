@@ -5,17 +5,12 @@
   "description": "Convert Google Maps coordinates to what3words addresses",
   "permissions": ["storage", "activeTab"],
   "host_permissions": [
-    "https://maps.google.com/*",
-    "https://www.google.com/maps/*",
+    "*://*.google.com/maps/*",
+    "*://maps.google.com/*",
     "https://api.what3words.com/*"
   ],
   "action": {
-    "default_popup": "popup/popup.html",
-    "default_icon": {
-      "16": "assets/icon16.svg",
-      "48": "assets/icon48.svg",
-      "128": "assets/icon128.svg"
-    }
+    "default_popup": "popup/popup.html"
   },
   "background": {
     "service_worker": "background/background.js"
@@ -23,17 +18,13 @@
   "content_scripts": [
     {
       "matches": [
-        "https://maps.google.com/*",
-        "https://www.google.com/maps/*"
+        "*://*.google.com/maps/*",
+        "*://maps.google.com/*"
       ],
       "js": ["content/content.js"],
       "css": ["content/content.css"],
-      "run_at": "document_end"
+      "run_at": "document_idle",
+      "all_frames": false
     }
-  ],
-  "icons": {
-    "16": "assets/icon16.svg",
-    "48": "assets/icon48.svg",
-    "128": "assets/icon128.svg"
-  }
+  ]
 }
