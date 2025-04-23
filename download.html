@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>what3words Extension - Download Files</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #e11f26;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    .directory {
+      margin-bottom: 30px;
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .file-link {
+      display: block;
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.2s;
+    }
+    .file-link:hover {
+      background-color: #e0e0e0;
+    }
+    .file-link span {
+      color: #e11f26;
+      font-weight: 500;
+    }
+    .instructions {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+    }
+    ol {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>what3words for Google Maps - Extension Files</h1>
+  
+  <p>Download all the files below and maintain the same directory structure when saving them on your computer.</p>
+  
+  <div class="directory">
+    <h2>Root Directory</h2>
+    <a href="manifest.json" class="file-link" download><span>manifest.json</span> - Extension manifest file</a>
+    <a href="extension.zip" class="file-link" download><span>extension.zip</span> - Complete extension (all files zipped)</a>
+    <a href="generated-icon.png" class="file-link" download><span>generated-icon.png</span> - Generated icon</a>
+  </div>
+  
+  <div class="directory">
+    <h2>/assets Directory</h2>
+    <a href="assets/icon16.svg" class="file-link" download><span>icon16.svg</span> - Small icon</a>
+    <a href="assets/icon48.svg" class="file-link" download><span>icon48.svg</span> - Medium icon</a>
+    <a href="assets/icon128.svg" class="file-link" download><span>icon128.svg</span> - Large icon</a>
+  </div>
+  
+  <div class="directory">
+    <h2>/background Directory</h2>
+    <a href="background/background.js" class="file-link" download><span>background.js</span> - Background script</a>
+  </div>
+  
+  <div class="directory">
+    <h2>/content Directory</h2>
+    <a href="content/content.js" class="file-link" download><span>content.js</span> - Content script</a>
+    <a href="content/content.css" class="file-link" download><span>content.css</span> - Content styles</a>
+  </div>
+  
+  <div class="directory">
+    <h2>/popup Directory</h2>
+    <a href="popup/popup.html" class="file-link" download><span>popup.html</span> - Popup HTML</a>
+    <a href="popup/popup.css" class="file-link" download><span>popup.css</span> - Popup styles</a>
+    <a href="popup/popup.js" class="file-link" download><span>popup.js</span> - Popup script</a>
+  </div>
+  
+  <div class="instructions">
+    <h2>Installation Instructions</h2>
+    <ol>
+      <li>Download all files above and organize them in the same folder structure on your computer</li>
+      <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
+      <li>Enable "Developer mode" using the toggle in the top-right corner</li>
+      <li>Click "Load unpacked" button</li>
+      <li>Select the folder containing the extension files</li>
+      <li>The extension should now be installed and appear in your Chrome toolbar</li>
+      <li>Click the extension icon, enter the what3words API key <code>Y2DE0YWC</code>, and click "Save"</li>
+      <li>Navigate to Google Maps and click anywhere on the map to see the what3words address</li>
+    </ol>
+  </div>
+</body>
+</html>
