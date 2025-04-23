@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>what3words for Google Maps</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>what3words for Google Maps</h1>
+    </div>
+    <div class="content">
+      <div id="config-section">
+        <label for="api-key">what3words API Key:</label>
+        <div class="input-group">
+          <input type="text" id="api-key" placeholder="Enter your API key">
+          <button id="save-button">Save</button>
+        </div>
+        <div class="info-text">
+          <p>Don't have an API key? <a href="https://developer.what3words.com/" target="_blank">Get one here</a></p>
+        </div>
+      </div>
+      <div id="status-section">
+        <div id="status-message"></div>
+      </div>
+      <div class="instructions">
+        <h2>How to use:</h2>
+        <ol>
+          <li>Enter your what3words API key above</li>
+          <li>Navigate to Google Maps</li>
+          <li>Click anywhere on the map</li>
+          <li>The what3words address will appear</li>
+        </ol>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Powered by <a href="https://what3words.com" target="_blank">what3words</a></p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

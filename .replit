@@ -1,0 +1,80 @@
+modules = ["nodejs-20", "python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Chrome Extension Server"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "extension_popup_test"
+
+[[workflows.workflow]]
+name = "Chrome Extension Server"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python -m http.server 5000"
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "extension_popup_test"
+author = "agent"
+
+[workflows.workflow.metadata]
+agentRequireRestartOnSave = false
+
+[[workflows.workflow.tasks]]
+task = "packager.installForAll"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = """
+python -c \"
+import http.server
+import socketserver
+import webbrowser
+import os
+import threading
+import time
+
+# Set up a simple HTTP server to serve the extension files
+PORT = 8000
+Handler = http.server.SimpleHTTPRequestHandler
+
+# Create a server
+httpd = socketserver.TCPServer(('', PORT), Handler)
+
+print('Serving at port', PORT)
+
+# Open the popup.html file in a browser window
+def open_browser():
+    time.sleep(1)
+    webbrowser.open('http://localhost:8000/popup/popup.html')
+
+# Start the browser in a separate thread
+threading.Thread(target=open_browser).start()
+
+# Serve until process is killed
+httpd.serve_forever()
+\""""
+
+[deployment]
+run = ["sh", "-c", "python -m http.server 5000"]
