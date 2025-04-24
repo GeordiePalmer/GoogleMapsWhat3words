@@ -1,4 +1,3 @@
-/* what3words overlay styles */
 .w3w-overlay {
   position: fixed;
   top: 80px;
@@ -8,10 +7,10 @@
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, opacity 0.3s ease;
   transform: translateY(-20px);
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .w3w-overlay.visible {
@@ -58,58 +57,136 @@
   background-color: #f0f0f0;
 }
 
+.w3w-search {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.w3w-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.w3w-search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.w3w-search-input:focus {
+  outline: none;
+  border-color: #e11f26;
+}
+
 .w3w-body {
   min-height: 60px;
 }
 
 .w3w-result {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  padding: 4px;
 }
 
 .w3w-address {
+  position: relative;
   font-size: 18px;
   font-weight: 500;
-  color: #e11f26;
-  padding: 8px;
+  padding: 12px;
   background-color: #f8f8f8;
   border-radius: 4px;
   text-align: center;
 }
 
-.w3w-actions {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.w3w-link, .w3w-copy {
-  flex: 1;
-  padding: 8px 12px;
-  border-radius: 4px;
-  text-align: center;
+.w3w-address-link {
+  color: #e11f26;
   text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
 }
 
-.w3w-link {
-  background-color: #e11f26;
-  color: white;
+.w3w-address-link:hover {
+  text-decoration: underline;
 }
 
-.w3w-link:hover {
-  background-color: #c01820;
-}
-
-.w3w-copy {
-  background-color: #f0f0f0;
-  color: #333;
+.w3w-copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
   border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #666;
+  border-radius: 4px;
 }
 
-.w3w-copy:hover {
-  background-color: #e0e0e0;
+.w3w-copy-button:hover {
+  background-color: #eee;
+}
+
+.w3w-coordinates {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.w3w-autosuggest-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  display: none;
+}
+
+.w3w-autosuggest-container.visible {
+  display: block;
+}
+
+.w3w-suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.w3w-suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.w3w-suggestion-item:hover {
+  background-color: #f8f8f8;
+}
+
+.w3w-suggestion-text {
+  font-weight: 500;
+  color: #e11f26;
+}
+
+.w3w-suggestion-place {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.w3w-spinner {
+  animation: w3w-spin 1.5s linear infinite;
+}
+
+@keyframes w3w-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
