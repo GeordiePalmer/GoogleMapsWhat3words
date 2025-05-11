@@ -46,7 +46,9 @@
 label {
   display: block;
   margin-bottom: 8px;
-  font-weight: 500;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #0A3049;
 }
 
 .input-group {
@@ -60,6 +62,13 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 4px 0 0 4px;
   font-size: 14px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #0A3049;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #0A3049;
 }
 
 button {
@@ -123,6 +132,9 @@ button:hover {
 .instructions h2 {
   font-size: 16px;
   margin-bottom: 8px;
+  color: #0A3049;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 700;
 }
 
 .instructions ol {
@@ -132,6 +144,8 @@ button:hover {
 .instructions li {
   margin-bottom: 4px;
   font-size: 14px;
+  color: #0A3049;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .footer {
