@@ -1,5 +1,5 @@
-/* Import the official what3words font */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
+/* Import the official what3words fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&family=Source+Serif+Pro:wght@700&display=swap');
 
 .w3w-overlay {
   position: fixed;

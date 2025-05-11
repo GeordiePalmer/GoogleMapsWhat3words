@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <rect width="48" height="48" rx="9" fill="white"/>
+  <g transform="translate(9, 9) scale(0.3)">
+    <path d="M10,12 L26,84" stroke="#e11f26" stroke-width="16" stroke-linecap="round"/>
+    <path d="M50,12 L66,84" stroke="#e11f26" stroke-width="16" stroke-linecap="round"/>
+    <path d="M90,12 L106,84" stroke="#e11f26" stroke-width="16" stroke-linecap="round"/>
+  </g>
+</svg>
