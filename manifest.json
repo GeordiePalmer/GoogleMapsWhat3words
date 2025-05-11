@@ -10,16 +10,16 @@
     "https://api.what3words.com/*"
   ],
   "icons": {
-    "16": "assets/icon16-new.svg",
-    "48": "assets/icon48-new.svg",
-    "128": "assets/icon128-new.svg"
+    "16": "assets/icon16-final.svg",
+    "48": "assets/icon48-final.svg",
+    "128": "assets/icon128-final.svg"
   },
   "action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
-      "16": "assets/icon16-new.svg",
-      "48": "assets/icon48-new.svg",
-      "128": "assets/icon128-new.svg"
+      "16": "assets/icon16-final.svg",
+      "48": "assets/icon48-final.svg",
+      "128": "assets/icon128-final.svg"
     }
   },
   "background": {
@@ -38,7 +38,7 @@
     }
   ],
   "web_accessible_resources": [{
-    "resources": ["assets/*.svg"],
+    "resources": ["assets/*.svg", "assets/img/*"],
     "matches": ["*://*.google.com/*", "*://maps.google.com/*"]
   }]
 }

@@ -271,7 +271,7 @@ function createW3WOverlay() {
   w3wOverlay.innerHTML = `
     <div class="w3w-overlay-content">
       <div class="w3w-header">
-        <img src="${chrome.runtime.getURL('assets/w3w-logo-small.svg')}" alt="what3words" class="w3w-logo">
+        <div class="w3w-header-title">what3words</div>
         <button class="w3w-close">&times;</button>
       </div>
       <div class="w3w-search">
