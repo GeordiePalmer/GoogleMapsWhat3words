@@ -180,13 +180,14 @@
 
 .w3w-suggestion-text {
   font-weight: 500;
-  color: #e11f26;
+  color: #0A3049;
 }
 
 .w3w-suggestion-place {
   font-size: 12px;
-  color: #666;
+  color: #0A3049;
   margin-top: 2px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .w3w-spinner {
