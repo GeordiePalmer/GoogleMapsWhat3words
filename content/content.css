@@ -105,8 +105,13 @@
 }
 
 .w3w-address-link {
-  color: #e11f26;
+  color: #0A3049;
   text-decoration: none;
+}
+
+.w3w-slashes {
+  color: #0A3049;
+  font-weight: bold;
 }
 
 .w3w-address-link:hover {
