@@ -37,9 +37,8 @@
 }
 
 .w3w-logo {
-  font-weight: bold;
-  font-size: 16px;
-  color: #e11f26;
+  height: 20px;
+  width: auto;
 }
 
 .w3w-close {
